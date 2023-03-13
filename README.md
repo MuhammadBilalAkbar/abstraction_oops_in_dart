@@ -8,7 +8,7 @@ Abstraction is simply `hiding`.
   features of a program while hiding unnecessary details.
 - Abstraction is achieved through the use of classes and interfaces.
 
-##### Classes:
+#### Classes:
 
 - A class is a blueprint for creating objects that have certain properties and behaviors.
 - The abstract keyword is used to declare abstract classes. To create an abstract class in Dart, you
@@ -40,7 +40,7 @@ In this example, the 'Animal' class is abstract because it contains an abstract 
 . The 'Dog' class extends the 'Animal' class and provides an implementation for the `makeSound()`
 method.
 
-##### Interfaces:
+#### Interfaces:
 
 - Interfaces are similar to abstract classes in that they define a set of methods that a class must
   implement. However, interfaces do not have any implementation of their own.
@@ -80,7 +80,7 @@ class Duck implements CanSwim {
 - Extend only one class. Implements one or more classes as long as all fields and methods inside the
   interfaces are overriden inside the derived class.
 
-#### Why to use Abstract Class and Interfaces instead of simple Inheritance?
+### Why to use Abstract Class and Interfaces instead of simple Inheritance?
 
 You can extend only one class in inheritance. But in implementation of abstraction, you can
 implement one or more interfaces.
