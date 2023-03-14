@@ -5,10 +5,12 @@ void main() {
   obj.methodA();
 }
 
+// Abstract class
 abstract class A {
   void methodA();
 }
 
+// Interface
 class D implements A {
   @override
   void methodA() {

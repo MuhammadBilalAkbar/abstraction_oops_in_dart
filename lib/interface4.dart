@@ -6,7 +6,7 @@ void main() {
   userRepo.delete();
 }
 
-abstract class UserRepoInterfaces {
+abstract class UserRepoInterface {
   late final List<int> usersList;
 
   void create();
@@ -18,7 +18,7 @@ abstract class UserRepoInterfaces {
   void delete();
 }
 
-class UserRepo implements UserRepoInterfaces {
+class UserRepo implements UserRepoInterface {
   @override
   late final List<int> usersList;
 
