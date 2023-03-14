@@ -49,6 +49,9 @@ method.
 - Each class by default defines its own interface formed out
   of its public field and methods. Implicit Interfaces = Abstract Class. Every class inside dart
   acts as interface.
+- Abstract classes/methods are created so that it can be implemented in its subclasses because
+  the abstract class does not know what to implement in the method but it knows that the method will
+  exist in its subclass.
 - Every class in dart is an implicit interface, but every abstract class is an explicit interface.
   when implementing an interface, you have to override every field and method from inside the
   interface.
@@ -70,9 +73,9 @@ class Duck implements CanSwim {
 }
 ```
 
-  <br/> Abstract classes/methods are created so that it can be implemented in its subclasses because
-  the abstract class does not know what to implement in the method but it knows that the method will
-  exist in its subclass.
+<br/>In this example, the `CanSwim` class is an interface because it contains only one abstract
+method `swim()`. The `Duck` class implements the `CanSwim` interface and provides an implementation
+for the `swim()` method.
 
 ### Difference between Implements and Extends
 
