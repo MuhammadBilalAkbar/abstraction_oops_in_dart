@@ -1,127 +1,81 @@
-## Abstraction (OOPS in Dart)
+## 1. Research: Abstraction (OOPS in Dart)
 
-### What is Abstraction?
+- Keywords:
+  - abstraction in dart
+  - abstraction in dart example
+  - dart abstract class vs interface
+  - dart abstract class fields
+  - dart abstract class with implementation
+  - dart abstract class
+  - dart abstract class example
+  - dart interface
+  - dart implement vs extend
+  - dart abstract method
+  - dart abstract class default implementation
+  - dart abstract class variables
+  - dart abstract class property
+  - dart abstract class constructor
+  - oops in dart
+- Video Title: Abstraction (OOPS) in dart with example - Dart abstract class vs interface - implement vs extend
 
-Abstraction is simply `hiding`.
 
-- Abstraction is an important concept in programming that allows you to focus on the essential
-  features of a program while hiding unnecessary details.
-- Abstraction is achieved through the use of classes and interfaces.
+## 2. Research: Competitors
 
-#### Class and Abstract Class:
+**Flutter Videos/Articles**
 
-- A class is a blueprint for creating objects that have certain properties and behaviors.
-- The abstract keyword is used to declare abstract classes. To create an abstract class in Dart, you
-  can use the `abstract` keyword before the class name.
-- Abstract classes cannot be instantiated directly, but they can be extended by other classes. They
-  just serve as an overview, a contract of all the methods and fields will have to implement in
-  derived class.
-- Abstract classes can also contain abstract methods, which are methods that have no implementation(
-  without body).
-- Methods that are declared but not implemented are known as abstract methods. An abstract class is
-  defined as a class that contains one or more abstract methods.
-- We can only `extend` abstract classes to other classes. A class can extend only one class at a
-  time. It is drawback of inheritance. So, we use interfaces.
-  <br/><br/> Example of abstract class in Dart:
+- 3.6K: https://www.youtube.com/watch?v=P46m577RO7k
+- 42K: https://www.youtube.com/watch?v=cTp9cV-tB_E
+- 8K: https://www.youtube.com/watch?v=OThpFGSzV1g
+- 1.5K: https://www.youtube.com/watch?v=YT0OtP5bXzg
+- 3.9K: https://www.youtube.com/watch?v=r6SIsFCA5FI
+- 17K: https://www.youtube.com/watch?v=VevQllpCmgw
+- 1.1K: https://www.youtube.com/watch?v=_SGf9EM56w8
+- 37K: https://www.youtube.com/watch?v=YQYoxiyiBrs
+- https://www.javatpoint.com/dart-abstract-classes#:~:text=Abstract%20classes%20are%20the%20classes,by%20using%20the%20abstract%20keyword.
+- https://www.geeksforgeeks.org/abstract-classes-in-dart/
+- https://www.tutorialspoint.com/abstract-classes-in-dart-programming
+- https://www.educative.io/answers/what-are-abstract-classes-in-dart
+- https://www.darttutorial.org/dart-tutorial/dart-abstract-class/
+- https://dhruvnakum.xyz/object-oriented-programming-in-dart-abstraction
+- https://medium.com/jay-tillu/abstract-class-and-abstract-methods-in-dart-4630f1e39f64
+- https://dart-tutorial.com/object-oriented-programming/abstract-class-in-dart/
+- https://dev.to/kcooperdev/abstraction-in-dart-part-2-ipd
+- https://www.peachpit.com/articles/article.aspx?p=2468332&seqNum=8
 
-```dart
-abstract class Animal {
-  void makeSound();
-}
+**Android/Swift/React Videos**
 
-class Dog extends Animal {
-  void makeSound() {
-    print('Woof!');
-  }
-}
-```
+- _[Add here the high ranking video links that have many views, or are ranked high on YouTube ...]_
+- _[e.g. 380K: https://www.youtube.com/watch?v=Nl54MJDR2p8]_
 
-In this example, the 'Animal' class is abstract because it contains an abstract method `makeSound()`
-. The 'Dog' class extends the 'Animal' class and provides an implementation for the `makeSound()`
-method.
+**Great Features** 
+- _[Add here the great features & things that are showcased well from the videos above, if it is about UI you could also attach screenshots]_
+- _..._
 
-#### Interfaces:
+**Problems from Videos** 
+- _[Add here problems that users faced in the video comments, or also solved problems from the video itself]_
+- _..._
 
-- Interfaces are similar to abstract classes in that they define a set of methods that a class must
-  implement. However, interfaces do not have any implementation of their own.
-- In Dart, there are no explicit interfaces. Explicit Interface = Abstract Class. Use abstract class
-  to declare interfaces.
-- Each class by default defines its own interface formed out
-  of its public field and methods. Implicit Interfaces = Abstract Class. Every class inside dart
-  acts as interface.
-- Abstract classes/methods are created so that it can be implemented in its subclasses because
-  the abstract class does not know what to implement in the method but it knows that the method will
-  exist in its subclass.
-- Every class in dart is an implicit interface, but every abstract class is an explicit interface.
-  when implementing an interface, you have to override every field and method from inside the
-  interface.
-- In order to explicitly declare an interface, you must create an abstract class with fields and
-  methods inside of it.
-- To create an interface in Dart, `implements` keyword is used and class itself implements the
-  abstract class.
-  <br/><br/>
+**Problems from Flutter Stackoverflow**
 
-```dart
-abstract class CanSwim {
-  void swim();
-}
+- _[Add here any links to problems people face with this topic ...]_
+- _[Add stackoverflow links "Flutter [Your Topic] not working" etc. ...]_
 
-class Duck implements CanSwim {
-  void swim() {
-    print('Swimming...');
-  }
-}
-```
+## 3. Video Structure
 
-<br/>In this example, the `CanSwim` class is an interface because it contains only one abstract
-method `swim()`. The `Duck` class implements the `CanSwim` interface and provides an implementation
-for the `swim()` method.
+**Main Points / Purpose Of Lesson**
 
-### Difference between Implements and Extends
+1. _[Why is it useful for the viewer to learn more about what we teach in this video lesson?]_
+2. _[What are the main points of this video lesson]_
+    - _[Add here multiple main points ...]_
+    - _[...]_
+3. _[Out of 1. & 2. create 2-3 sentences that could be later used for recording the introduction of this video lesson]_
 
-- Extend keyword shares the behavior of base to derived class.
-- Implement keyword forces the behavior of interfaces to derived class.
-- Extend only one class. Implements one or more classes as long as all fields and methods inside the
-  interfaces are overriden inside the derived class.
-
-### Why to use Abstract Class and Interfaces instead of simple Inheritance?
-
-You can extend only one class in inheritance. But in implementation of abstraction, you can
-implement one or more interfaces.
-
-```dart
-abstract class Shape {
-  void draw();
-}
-
-class Circle extends Shape {
-  @override
-  void draw() => print('Drawing Circle...');
-}
-```
-
-```dart
-abstract class A {
-  void methodA();
-}
-
-abstract class B {
-  void methodB() {}
-}
-
-abstract class C {
-  void methodC();
-}
-
-// Class A, B and C are Interfaces. A class can implement more than one classes.
-class D implements A, B, C {
-  @override
-  void methodA() => print('Class D is implementing A');
-
-  @override
-  void methodB() => print('Class D is implementing B');
-
-  @override
-  void methodC() => print('Class D is implementing C');
-}
-```
+**The Structured Main Content**
+1. _[Add here the main topics the video project is covering in chronological order. For each topic add the main points how this lesson can be taught step by step to beginners who never did anything related to what this lesson is about]_
+2. _[e.g. for this video project: https://www.youtube.com/watch?v=MSv38jO4EJk]_
+    - _[1. Setup Android & iOS]_
+      - _[Add for each topic more detailed steps ...]_
+      - _[...]_
+    - _[2. Pick Image From Gallery]_
+    - _[3. Pick Image From Camera]_
+    - _[4. Persist Images To Local Storage]_
